@@ -1,0 +1,42 @@
+{
+  "aeneas_commit": "5d08da45a405913bbee6fd544e01debf8154ac9d",
+  "charon_commit": "f5208b1c4ce287898a1fc015d41a20da3baf0974",
+  "tool_root": "/home/zhang-liao/auto_verify_dalek/curve25519-dalek-u32/.aeneas/aeneas",
+  "cargo_args": [
+    "--locked",
+    "--offline",
+    "--no-default-features",
+    "--features",
+    "groups,pairings,alloc"
+  ],
+  "opaque": [
+    "bls12_381::scalar::{impl ff::Field for _}::sqrt",
+    "bls12_381::scalar::{impl ff::Field for _}::sqrt_ratio",
+    "bls12_381::g1::{impl group::Group for _}::try_random",
+    "bls12_381::g1::_::batch_normalize",
+    "bls12_381::g1::_::multiply",
+    "bls12_381::g2::{impl group::Group for _}::try_random",
+    "bls12_381::g2::_::batch_normalize",
+    "bls12_381::g2::_::multiply",
+    "bls12_381::pairings::_::mul",
+    "bls12_381::pairings::multi_miller_loop",
+    "bls12_381::g1::_::recommended_wnaf_for_num_scalars",
+    "bls12_381::g2::_::recommended_wnaf_for_num_scalars"
+  ],
+  "exclude": [
+    "group::CurveAffine",
+    "bls12_381::g1::{impl group::CurveAffine for _}",
+    "bls12_381::g2::{impl group::CurveAffine for _}",
+    "bls12_381::pairings::{impl pairing::PairingCurveAffine for _}",
+    "bls12_381::pairings::{impl pairing::Engine for _}",
+    "bls12_381::pairings::{impl pairing::MultiMillerLoop for _}",
+    "group::Curve",
+    "bls12_381::g1::{impl group::Curve for _}",
+    "bls12_381::g2::{impl group::Curve for _}",
+    "group::prime::PrimeCurve",
+    "bls12_381::g1::{impl group::prime::PrimeCurve for _}",
+    "bls12_381::g2::{impl group::prime::PrimeCurve for _}",
+    "bls12_381::g1::{impl group::Curve for _}::batch_normalize",
+    "bls12_381::g2::{impl group::Curve for _}::batch_normalize"
+  ]
+}

@@ -1,0 +1,20 @@
+# Rust extraction build output and Charon intermediate representation.
+/target/
+/llbc/
+
+# Local diagnostics and regeneration reports.
+/logs/
+
+# Lean dependencies and build output (keep .lean sources and lake-manifest.json).
+/lean/.lake/
+/lean/**/*.olean
+/lean/**/*.olean.*
+/lean/**/*.ilean
+/lean/**/*.ir
+
+# Aeneas translation metadata; keep generated Lean code for review.
+/lean/Bls12381/translation.json
+
+# Python helper caches.
+__pycache__/
+*.py[cod]

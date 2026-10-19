@@ -1,0 +1,4128 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "5d22dd74c2a14fb9f3d3b85ae2c39d0c669ddd99",
+  "inventory_kind": "lexical_production_prefix_not_compiler_inventory",
+  "contract_document": "SCOPE.md",
+  "contracts": [
+    "WORD",
+    "FIELD",
+    "RAW",
+    "REDUCE",
+    "PRODUCTS",
+    "FIELD_CODEC",
+    "POWER",
+    "ROOT",
+    "EXTENSION",
+    "CURVE",
+    "SUBGROUP",
+    "BATCH",
+    "POINT_CODEC",
+    "UNCHECKED_CODEC",
+    "PAIRING",
+    "PREPARED",
+    "HASH",
+    "EXPAND",
+    "RANDOM",
+    "ADAPTER",
+    "FORMAT"
+  ],
+  "proofs_completed": 0,
+  "pending_inventory_obligations": [
+    "macro and derive expansion",
+    "cfg and target-specific branches",
+    "trait default methods and external dependency closure",
+    "zeroize marker implementations",
+    "G2Prepared constructor and nested driver context",
+    "exact REDUCE/PRODUCTS/ROOT/EXPAND premises"
+  ],
+  "modules": [
+    {
+      "source": "src/fp.rs",
+      "test_region_start": 663,
+      "functions": [
+        {
+          "id": "src/fp.rs:18:fmt",
+          "name": "fmt",
+          "line": 18,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:29:default",
+          "name": "default",
+          "line": 29,
+          "signature_start": "fn default() -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:38:ct_eq",
+          "name": "ct_eq",
+          "line": 38,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:51:eq",
+          "name": "eq",
+          "line": 51,
+          "signature_start": "fn eq(&self, other: &Self) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:57:conditional_select",
+          "name": "conditional_select",
+          "line": 57,
+          "signature_start": "fn conditional_select(a: &Self, b: &Self, choice: Choice) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:116:neg",
+          "name": "neg",
+          "line": 116,
+          "signature_start": "fn neg(self) -> Fp {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:125:neg",
+          "name": "neg",
+          "line": 125,
+          "signature_start": "fn neg(self) -> Fp {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:134:sub",
+          "name": "sub",
+          "line": 134,
+          "signature_start": "fn sub(self, rhs: &'b Fp) -> Fp {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:143:add",
+          "name": "add",
+          "line": 143,
+          "signature_start": "fn add(self, rhs: &'b Fp) -> Fp {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:152:mul",
+          "name": "mul",
+          "line": 152,
+          "signature_start": "fn mul(self, rhs: &'b Fp) -> Fp {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:163:zero",
+          "name": "zero",
+          "line": 163,
+          "signature_start": "pub const fn zero() -> Fp {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:169:one",
+          "name": "one",
+          "line": 169,
+          "signature_start": "pub const fn one() -> Fp {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:173:is_zero",
+          "name": "is_zero",
+          "line": 173,
+          "signature_start": "pub fn is_zero(&self) -> Choice {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:179:from_bytes",
+          "name": "from_bytes",
+          "line": 179,
+          "signature_start": "pub fn from_bytes(bytes: &[u8; 48]) -> CtOption<Fp> {",
+          "contract": "FIELD_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:211:to_bytes",
+          "name": "to_bytes",
+          "line": 211,
+          "signature_start": "pub fn to_bytes(self) -> [u8; 48] {",
+          "contract": "FIELD_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:229:try_random",
+          "name": "try_random",
+          "line": 229,
+          "signature_start": "pub(crate) fn try_random<R: TryRng + ?Sized>(rng: &mut R) -> Result<Fp, R::Error> {",
+          "contract": "RANDOM",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:251:from_u768",
+          "name": "from_u768",
+          "line": 251,
+          "signature_start": "fn from_u768(limbs: [u64; 12]) -> Fp {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:273:lexicographically_largest",
+          "name": "lexicographically_largest",
+          "line": 273,
+          "signature_start": "pub fn lexicographically_largest(&self) -> Choice {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:302:from_raw_unchecked",
+          "name": "from_raw_unchecked",
+          "line": 302,
+          "signature_start": "pub const fn from_raw_unchecked(v: [u64; 6]) -> Fp {",
+          "contract": "RAW",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:309:pow_vartime",
+          "name": "pow_vartime",
+          "line": 309,
+          "signature_start": "pub fn pow_vartime(&self, by: &[u64; 6]) -> Self {",
+          "contract": "POWER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:324:sqrt",
+          "name": "sqrt",
+          "line": 324,
+          "signature_start": "pub fn sqrt(&self) -> CtOption<Self> {",
+          "contract": "ROOT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:346:invert",
+          "name": "invert",
+          "line": 346,
+          "signature_start": "pub fn invert(&self) -> CtOption<Self> {",
+          "contract": "ROOT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:361:subtract_p",
+          "name": "subtract_p",
+          "line": 361,
+          "signature_start": "const fn subtract_p(&self) -> Fp {",
+          "contract": "REDUCE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:382:add",
+          "name": "add",
+          "line": 382,
+          "signature_start": "pub const fn add(&self, rhs: &Fp) -> Fp {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:396:neg",
+          "name": "neg",
+          "line": 396,
+          "signature_start": "pub const fn neg(&self) -> Fp {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:421:sub",
+          "name": "sub",
+          "line": 421,
+          "signature_start": "pub const fn sub(&self, rhs: &Fp) -> Fp {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:430:sum_of_products",
+          "name": "sum_of_products",
+          "line": 430,
+          "signature_start": "pub(crate) fn sum_of_products<const T: usize>(a: [Fp; T], b: [Fp; T]) -> Fp {",
+          "contract": "PRODUCTS",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:487:montgomery_reduce",
+          "name": "montgomery_reduce",
+          "line": 487,
+          "signature_start": "pub(crate) const fn montgomery_reduce(",
+          "contract": "REDUCE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:565:mul",
+          "name": "mul",
+          "line": 565,
+          "signature_start": "pub const fn mul(&self, rhs: &Fp) -> Fp {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp.rs:613:square",
+          "name": "square",
+          "line": 613,
+          "signature_start": "pub const fn square(&self) -> Self {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/fp12.rs",
+      "test_region_start": 264,
+      "functions": [
+        {
+          "id": "src/fp12.rs:19:from",
+          "name": "from",
+          "line": 19,
+          "signature_start": "fn from(f: Fp) -> Fp12 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:28:from",
+          "name": "from",
+          "line": 28,
+          "signature_start": "fn from(f: Fp2) -> Fp12 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:37:from",
+          "name": "from",
+          "line": 37,
+          "signature_start": "fn from(f: Fp6) -> Fp12 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:46:eq",
+          "name": "eq",
+          "line": 46,
+          "signature_start": "fn eq(&self, other: &Fp12) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:54:clone",
+          "name": "clone",
+          "line": 54,
+          "signature_start": "fn clone(&self) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:60:default",
+          "name": "default",
+          "line": 60,
+          "signature_start": "fn default() -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:69:fmt",
+          "name": "fmt",
+          "line": 69,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:76:conditional_select",
+          "name": "conditional_select",
+          "line": 76,
+          "signature_start": "fn conditional_select(a: &Self, b: &Self, choice: Choice) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:86:ct_eq",
+          "name": "ct_eq",
+          "line": 86,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:93:zero",
+          "name": "zero",
+          "line": 93,
+          "signature_start": "pub fn zero() -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:101:one",
+          "name": "one",
+          "line": 101,
+          "signature_start": "pub fn one() -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:109:try_random",
+          "name": "try_random",
+          "line": 109,
+          "signature_start": "pub(crate) fn try_random<R: TryRng + ?Sized>(rng: &mut R) -> Result<Self, R::Error> {",
+          "contract": "RANDOM",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:116:mul_by_014",
+          "name": "mul_by_014",
+          "line": 116,
+          "signature_start": "pub fn mul_by_014(&self, c0: &Fp2, c1: &Fp2, c4: &Fp2) -> Fp12 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:131:is_zero",
+          "name": "is_zero",
+          "line": 131,
+          "signature_start": "pub fn is_zero(&self) -> Choice {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:136:conjugate",
+          "name": "conjugate",
+          "line": 136,
+          "signature_start": "pub fn conjugate(&self) -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:145:frobenius_map",
+          "name": "frobenius_map",
+          "line": 145,
+          "signature_start": "pub fn frobenius_map(&self) -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:174:square",
+          "name": "square",
+          "line": 174,
+          "signature_start": "pub fn square(&self) -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:187:invert",
+          "name": "invert",
+          "line": 187,
+          "signature_start": "pub fn invert(&self) -> CtOption<Self> {",
+          "contract": "ROOT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:201:mul",
+          "name": "mul",
+          "line": 201,
+          "signature_start": "fn mul(self, other: &'b Fp12) -> Self::Output {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:220:add",
+          "name": "add",
+          "line": 220,
+          "signature_start": "fn add(self, rhs: &'b Fp12) -> Self::Output {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:232:neg",
+          "name": "neg",
+          "line": 232,
+          "signature_start": "fn neg(self) -> Self::Output {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:244:neg",
+          "name": "neg",
+          "line": 244,
+          "signature_start": "fn neg(self) -> Self::Output {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp12.rs:253:sub",
+          "name": "sub",
+          "line": 253,
+          "signature_start": "fn sub(self, rhs: &'b Fp12) -> Self::Output {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/fp2.rs",
+      "test_region_start": 356,
+      "functions": [
+        {
+          "id": "src/fp2.rs:17:fmt",
+          "name": "fmt",
+          "line": 17,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:23:default",
+          "name": "default",
+          "line": 23,
+          "signature_start": "fn default() -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:32:from",
+          "name": "from",
+          "line": 32,
+          "signature_start": "fn from(f: Fp) -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:41:ct_eq",
+          "name": "ct_eq",
+          "line": 41,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:49:eq",
+          "name": "eq",
+          "line": 49,
+          "signature_start": "fn eq(&self, other: &Self) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:55:conditional_select",
+          "name": "conditional_select",
+          "line": 55,
+          "signature_start": "fn conditional_select(a: &Self, b: &Self, choice: Choice) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:67:neg",
+          "name": "neg",
+          "line": 67,
+          "signature_start": "fn neg(self) -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:76:neg",
+          "name": "neg",
+          "line": 76,
+          "signature_start": "fn neg(self) -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:85:sub",
+          "name": "sub",
+          "line": 85,
+          "signature_start": "fn sub(self, rhs: &'b Fp2) -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:94:add",
+          "name": "add",
+          "line": 94,
+          "signature_start": "fn add(self, rhs: &'b Fp2) -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:103:mul",
+          "name": "mul",
+          "line": 103,
+          "signature_start": "fn mul(self, rhs: &'b Fp2) -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:113:zero",
+          "name": "zero",
+          "line": 113,
+          "signature_start": "pub const fn zero() -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:121:one",
+          "name": "one",
+          "line": 121,
+          "signature_start": "pub const fn one() -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:128:is_zero",
+          "name": "is_zero",
+          "line": 128,
+          "signature_start": "pub fn is_zero(&self) -> Choice {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:132:try_random",
+          "name": "try_random",
+          "line": 132,
+          "signature_start": "pub(crate) fn try_random<R: TryRng + ?Sized>(rng: &mut R) -> Result<Fp2, R::Error> {",
+          "contract": "RANDOM",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:141:frobenius_map",
+          "name": "frobenius_map",
+          "line": 141,
+          "signature_start": "pub fn frobenius_map(&self) -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:148:conjugate",
+          "name": "conjugate",
+          "line": 148,
+          "signature_start": "pub fn conjugate(&self) -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:156:mul_by_nonresidue",
+          "name": "mul_by_nonresidue",
+          "line": 156,
+          "signature_start": "pub fn mul_by_nonresidue(&self) -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:171:lexicographically_largest",
+          "name": "lexicographically_largest",
+          "line": 171,
+          "signature_start": "pub fn lexicographically_largest(&self) -> Choice {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:182:square",
+          "name": "square",
+          "line": 182,
+          "signature_start": "pub const fn square(&self) -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:205:mul",
+          "name": "mul",
+          "line": 205,
+          "signature_start": "pub fn mul(&self, rhs: &Fp2) -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:224:add",
+          "name": "add",
+          "line": 224,
+          "signature_start": "pub const fn add(&self, rhs: &Fp2) -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:231:sub",
+          "name": "sub",
+          "line": 231,
+          "signature_start": "pub const fn sub(&self, rhs: &Fp2) -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:238:neg",
+          "name": "neg",
+          "line": 238,
+          "signature_start": "pub const fn neg(&self) -> Fp2 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:245:sqrt",
+          "name": "sqrt",
+          "line": 245,
+          "signature_start": "pub fn sqrt(&self) -> CtOption<Self> {",
+          "contract": "ROOT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:300:invert",
+          "name": "invert",
+          "line": 300,
+          "signature_start": "pub fn invert(&self) -> CtOption<Self> {",
+          "contract": "ROOT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:324:pow_vartime",
+          "name": "pow_vartime",
+          "line": 324,
+          "signature_start": "pub fn pow_vartime(&self, by: &[u64; 6]) -> Self {",
+          "contract": "POWER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp2.rs:341:pow_vartime_extended",
+          "name": "pow_vartime_extended",
+          "line": 341,
+          "signature_start": "pub(crate) fn pow_vartime_extended(&self, by: &[u64]) -> Self {",
+          "contract": "POWER",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/fp6.rs",
+      "test_region_start": 375,
+      "functions": [
+        {
+          "id": "src/fp6.rs:19:from",
+          "name": "from",
+          "line": 19,
+          "signature_start": "fn from(f: Fp) -> Fp6 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:29:from",
+          "name": "from",
+          "line": 29,
+          "signature_start": "fn from(f: Fp2) -> Fp6 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:39:eq",
+          "name": "eq",
+          "line": 39,
+          "signature_start": "fn eq(&self, other: &Fp6) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:47:clone",
+          "name": "clone",
+          "line": 47,
+          "signature_start": "fn clone(&self) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:53:default",
+          "name": "default",
+          "line": 53,
+          "signature_start": "fn default() -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:62:fmt",
+          "name": "fmt",
+          "line": 62,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:69:conditional_select",
+          "name": "conditional_select",
+          "line": 69,
+          "signature_start": "fn conditional_select(a: &Self, b: &Self, choice: Choice) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:80:ct_eq",
+          "name": "ct_eq",
+          "line": 80,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:87:zero",
+          "name": "zero",
+          "line": 87,
+          "signature_start": "pub fn zero() -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:96:one",
+          "name": "one",
+          "line": 96,
+          "signature_start": "pub fn one() -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:105:try_random",
+          "name": "try_random",
+          "line": 105,
+          "signature_start": "pub(crate) fn try_random<R: TryRng + ?Sized>(rng: &mut R) -> Result<Self, R::Error> {",
+          "contract": "RANDOM",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:113:mul_by_1",
+          "name": "mul_by_1",
+          "line": 113,
+          "signature_start": "pub fn mul_by_1(&self, c1: &Fp2) -> Fp6 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:121:mul_by_01",
+          "name": "mul_by_01",
+          "line": 121,
+          "signature_start": "pub fn mul_by_01(&self, c0: &Fp2, c1: &Fp2) -> Fp6 {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:139:mul_by_nonresidue",
+          "name": "mul_by_nonresidue",
+          "line": 139,
+          "signature_start": "pub fn mul_by_nonresidue(&self) -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:154:frobenius_map",
+          "name": "frobenius_map",
+          "line": 154,
+          "signature_start": "pub fn frobenius_map(&self) -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:191:is_zero",
+          "name": "is_zero",
+          "line": 191,
+          "signature_start": "pub fn is_zero(&self) -> Choice {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:200:mul_interleaved",
+          "name": "mul_interleaved",
+          "line": 200,
+          "signature_start": "fn mul_interleaved(&self, b: &Self) -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:277:square",
+          "name": "square",
+          "line": 277,
+          "signature_start": "pub fn square(&self) -> Self {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:294:invert",
+          "name": "invert",
+          "line": 294,
+          "signature_start": "pub fn invert(&self) -> CtOption<Self> {",
+          "contract": "ROOT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:319:mul",
+          "name": "mul",
+          "line": 319,
+          "signature_start": "fn mul(self, other: &'b Fp6) -> Self::Output {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:328:add",
+          "name": "add",
+          "line": 328,
+          "signature_start": "fn add(self, rhs: &'b Fp6) -> Self::Output {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:341:neg",
+          "name": "neg",
+          "line": 341,
+          "signature_start": "fn neg(self) -> Self::Output {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:354:neg",
+          "name": "neg",
+          "line": 354,
+          "signature_start": "fn neg(self) -> Self::Output {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/fp6.rs:363:sub",
+          "name": "sub",
+          "line": 363,
+          "signature_start": "fn sub(self, rhs: &'b Fp6) -> Self::Output {",
+          "contract": "EXTENSION",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/g1.rs",
+      "test_region_start": 1092,
+      "functions": [
+        {
+          "id": "src/g1.rs:35:default",
+          "name": "default",
+          "line": 35,
+          "signature_start": "fn default() -> G1Affine {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:44:fmt",
+          "name": "fmt",
+          "line": 44,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:50:from",
+          "name": "from",
+          "line": 50,
+          "signature_start": "fn from(p: &'a G1Projective) -> G1Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:66:from",
+          "name": "from",
+          "line": 66,
+          "signature_start": "fn from(p: G1Projective) -> G1Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:72:ct_eq",
+          "name": "ct_eq",
+          "line": 72,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:86:conditional_select",
+          "name": "conditional_select",
+          "line": 86,
+          "signature_start": "fn conditional_select(a: &Self, b: &Self, choice: Choice) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:98:eq",
+          "name": "eq",
+          "line": 98,
+          "signature_start": "fn eq(&self, other: &Self) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:107:neg",
+          "name": "neg",
+          "line": 107,
+          "signature_start": "fn neg(self) -> G1Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:120:neg",
+          "name": "neg",
+          "line": 120,
+          "signature_start": "fn neg(self) -> G1Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:129:add",
+          "name": "add",
+          "line": 129,
+          "signature_start": "fn add(self, rhs: &'b G1Projective) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:138:add",
+          "name": "add",
+          "line": 138,
+          "signature_start": "fn add(self, rhs: &'b G1Affine) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:147:sub",
+          "name": "sub",
+          "line": 147,
+          "signature_start": "fn sub(self, rhs: &'b G1Projective) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:156:sub",
+          "name": "sub",
+          "line": 156,
+          "signature_start": "fn sub(self, rhs: &'b G1Affine) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:165:sum",
+          "name": "sum",
+          "line": 165,
+          "signature_start": "fn sum<I>(iter: I) -> Self",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:187:identity",
+          "name": "identity",
+          "line": 187,
+          "signature_start": "pub fn identity() -> G1Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:197:generator",
+          "name": "generator",
+          "line": 197,
+          "signature_start": "pub fn generator() -> G1Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:221:to_compressed",
+          "name": "to_compressed",
+          "line": 221,
+          "signature_start": "pub fn to_compressed(&self) -> [u8; 48] {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:246:to_uncompressed",
+          "name": "to_uncompressed",
+          "line": 246,
+          "signature_start": "pub fn to_uncompressed(&self) -> [u8; 96] {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:264:from_uncompressed",
+          "name": "from_uncompressed",
+          "line": 264,
+          "signature_start": "pub fn from_uncompressed(bytes: &[u8; 96]) -> CtOption<Self> {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:273:from_uncompressed_unchecked",
+          "name": "from_uncompressed_unchecked",
+          "line": 273,
+          "signature_start": "pub fn from_uncompressed_unchecked(bytes: &[u8; 96]) -> CtOption<Self> {",
+          "contract": "UNCHECKED_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:326:from_compressed",
+          "name": "from_compressed",
+          "line": 326,
+          "signature_start": "pub fn from_compressed(bytes: &[u8; 48]) -> CtOption<Self> {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:337:from_compressed_unchecked",
+          "name": "from_compressed_unchecked",
+          "line": 337,
+          "signature_start": "pub fn from_compressed_unchecked(bytes: &[u8; 48]) -> CtOption<Self> {",
+          "contract": "UNCHECKED_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:394:is_identity",
+          "name": "is_identity",
+          "line": 394,
+          "signature_start": "pub fn is_identity(&self) -> Choice {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:401:is_torsion_free",
+          "name": "is_torsion_free",
+          "line": 401,
+          "signature_start": "pub fn is_torsion_free(&self) -> Choice {",
+          "contract": "SUBGROUP",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:414:is_on_curve",
+          "name": "is_on_curve",
+          "line": 414,
+          "signature_start": "pub fn is_on_curve(&self) -> Choice {",
+          "contract": "SUBGROUP",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:430:endomorphism",
+          "name": "endomorphism",
+          "line": 430,
+          "signature_start": "fn endomorphism(p: &G1Affine) -> G1Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:449:default",
+          "name": "default",
+          "line": 449,
+          "signature_start": "fn default() -> G1Projective {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:458:fmt",
+          "name": "fmt",
+          "line": 458,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:464:from",
+          "name": "from",
+          "line": 464,
+          "signature_start": "fn from(p: &'a G1Affine) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:474:from",
+          "name": "from",
+          "line": 474,
+          "signature_start": "fn from(p: G1Affine) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:480:ct_eq",
+          "name": "ct_eq",
+          "line": 480,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:499:conditional_select",
+          "name": "conditional_select",
+          "line": 499,
+          "signature_start": "fn conditional_select(a: &Self, b: &Self, choice: Choice) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:511:eq",
+          "name": "eq",
+          "line": 511,
+          "signature_start": "fn eq(&self, other: &Self) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:520:neg",
+          "name": "neg",
+          "line": 520,
+          "signature_start": "fn neg(self) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:533:neg",
+          "name": "neg",
+          "line": 533,
+          "signature_start": "fn neg(self) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:542:add",
+          "name": "add",
+          "line": 542,
+          "signature_start": "fn add(self, rhs: &'b G1Projective) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:551:sub",
+          "name": "sub",
+          "line": 551,
+          "signature_start": "fn sub(self, rhs: &'b G1Projective) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:559:mul",
+          "name": "mul",
+          "line": 559,
+          "signature_start": "fn mul(self, other: &'b Scalar) -> Self::Output {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:568:mul",
+          "name": "mul",
+          "line": 568,
+          "signature_start": "fn mul(self, rhs: &'b G1Projective) -> Self::Output {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:576:mul",
+          "name": "mul",
+          "line": 576,
+          "signature_start": "fn mul(self, other: &'b Scalar) -> Self::Output {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:585:mul",
+          "name": "mul",
+          "line": 585,
+          "signature_start": "fn mul(self, rhs: &'b G1Affine) -> Self::Output {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:597:mul_by_3b",
+          "name": "mul_by_3b",
+          "line": 597,
+          "signature_start": "fn mul_by_3b(a: Fp) -> Fp {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:605:identity",
+          "name": "identity",
+          "line": 605,
+          "signature_start": "pub fn identity() -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:615:generator",
+          "name": "generator",
+          "line": 615,
+          "signature_start": "pub fn generator() -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:638:double",
+          "name": "double",
+          "line": 638,
+          "signature_start": "pub fn double(&self) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:670:add",
+          "name": "add",
+          "line": 670,
+          "signature_start": "pub fn add(&self, rhs: &G1Projective) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:715:add_mixed",
+          "name": "add_mixed",
+          "line": 715,
+          "signature_start": "pub fn add_mixed(&self, rhs: &G1Affine) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:754:multiply",
+          "name": "multiply",
+          "line": 754,
+          "signature_start": "fn multiply(&self, by: &[u8; 32]) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:777:mul_by_x",
+          "name": "mul_by_x",
+          "line": 777,
+          "signature_start": "fn mul_by_x(&self) -> G1Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:800:clear_cofactor",
+          "name": "clear_cofactor",
+          "line": 800,
+          "signature_start": "pub fn clear_cofactor(&self) -> G1Projective {",
+          "contract": "SUBGROUP",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:806:batch_normalize",
+          "name": "batch_normalize",
+          "line": 806,
+          "signature_start": "pub fn batch_normalize(p: &[Self], q: &mut [G1Affine]) {",
+          "contract": "BATCH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:843:is_identity",
+          "name": "is_identity",
+          "line": 843,
+          "signature_start": "pub fn is_identity(&self) -> Choice {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:849:is_on_curve",
+          "name": "is_on_curve",
+          "line": 849,
+          "signature_start": "pub fn is_on_curve(&self) -> Choice {",
+          "contract": "SUBGROUP",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:861:fmt",
+          "name": "fmt",
+          "line": 861,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:867:default",
+          "name": "default",
+          "line": 867,
+          "signature_start": "fn default() -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:876:as_ref",
+          "name": "as_ref",
+          "line": 876,
+          "signature_start": "fn as_ref(&self) -> &[u8] {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:882:as_mut",
+          "name": "as_mut",
+          "line": 882,
+          "signature_start": "fn as_mut(&mut self) -> &mut [u8] {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:888:ct_eq",
+          "name": "ct_eq",
+          "line": 888,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:896:eq",
+          "name": "eq",
+          "line": 896,
+          "signature_start": "fn eq(&self, other: &Self) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:905:fmt",
+          "name": "fmt",
+          "line": 905,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:911:default",
+          "name": "default",
+          "line": 911,
+          "signature_start": "fn default() -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:920:as_ref",
+          "name": "as_ref",
+          "line": 920,
+          "signature_start": "fn as_ref(&self) -> &[u8] {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:926:as_mut",
+          "name": "as_mut",
+          "line": 926,
+          "signature_start": "fn as_mut(&mut self) -> &mut [u8] {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:932:ct_eq",
+          "name": "ct_eq",
+          "line": 932,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:940:eq",
+          "name": "eq",
+          "line": 940,
+          "signature_start": "fn eq(&self, other: &Self) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:948:try_random",
+          "name": "try_random",
+          "line": 948,
+          "signature_start": "fn try_random<R: TryRng + ?Sized>(rng: &mut R) -> Result<Self, R::Error> {",
+          "contract": "RANDOM",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:970:identity",
+          "name": "identity",
+          "line": 970,
+          "signature_start": "fn identity() -> Self {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:974:generator",
+          "name": "generator",
+          "line": 974,
+          "signature_start": "fn generator() -> Self {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:978:is_identity",
+          "name": "is_identity",
+          "line": 978,
+          "signature_start": "fn is_identity(&self) -> Choice {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:983:double",
+          "name": "double",
+          "line": 983,
+          "signature_start": "fn double(&self) -> Self {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:990:recommended_wnaf_for_num_scalars",
+          "name": "recommended_wnaf_for_num_scalars",
+          "line": 990,
+          "signature_start": "fn recommended_wnaf_for_num_scalars(num_scalars: usize) -> usize {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1012:batch_normalize",
+          "name": "batch_normalize",
+          "line": 1012,
+          "signature_start": "fn batch_normalize(p: &[Self], q: &mut [Self::Affine]) {",
+          "contract": "BATCH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1016:to_affine",
+          "name": "to_affine",
+          "line": 1016,
+          "signature_start": "fn to_affine(&self) -> Self::Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1027:identity",
+          "name": "identity",
+          "line": 1027,
+          "signature_start": "fn identity() -> Self {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1031:generator",
+          "name": "generator",
+          "line": 1031,
+          "signature_start": "fn generator() -> Self {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1035:is_identity",
+          "name": "is_identity",
+          "line": 1035,
+          "signature_start": "fn is_identity(&self) -> Choice {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1039:to_curve",
+          "name": "to_curve",
+          "line": 1039,
+          "signature_start": "fn to_curve(&self) -> Self::Curve {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1047:from_bytes",
+          "name": "from_bytes",
+          "line": 1047,
+          "signature_start": "fn from_bytes(bytes: &Self::Repr) -> CtOption<Self> {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1051:from_bytes_unchecked",
+          "name": "from_bytes_unchecked",
+          "line": 1051,
+          "signature_start": "fn from_bytes_unchecked(bytes: &Self::Repr) -> CtOption<Self> {",
+          "contract": "UNCHECKED_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1055:to_bytes",
+          "name": "to_bytes",
+          "line": 1055,
+          "signature_start": "fn to_bytes(&self) -> Self::Repr {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1063:from_bytes",
+          "name": "from_bytes",
+          "line": 1063,
+          "signature_start": "fn from_bytes(bytes: &Self::Repr) -> CtOption<Self> {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1067:from_bytes_unchecked",
+          "name": "from_bytes_unchecked",
+          "line": 1067,
+          "signature_start": "fn from_bytes_unchecked(bytes: &Self::Repr) -> CtOption<Self> {",
+          "contract": "UNCHECKED_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1071:to_bytes",
+          "name": "to_bytes",
+          "line": 1071,
+          "signature_start": "fn to_bytes(&self) -> Self::Repr {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1079:from_uncompressed",
+          "name": "from_uncompressed",
+          "line": 1079,
+          "signature_start": "fn from_uncompressed(bytes: &Self::Uncompressed) -> CtOption<Self> {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1083:from_uncompressed_unchecked",
+          "name": "from_uncompressed_unchecked",
+          "line": 1083,
+          "signature_start": "fn from_uncompressed_unchecked(bytes: &Self::Uncompressed) -> CtOption<Self> {",
+          "contract": "UNCHECKED_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g1.rs:1087:to_uncompressed",
+          "name": "to_uncompressed",
+          "line": 1087,
+          "signature_start": "fn to_uncompressed(&self) -> Self::Uncompressed {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/g2.rs",
+      "test_region_start": 1236,
+      "functions": [
+        {
+          "id": "src/g2.rs:36:default",
+          "name": "default",
+          "line": 36,
+          "signature_start": "fn default() -> G2Affine {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:45:fmt",
+          "name": "fmt",
+          "line": 45,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:51:from",
+          "name": "from",
+          "line": 51,
+          "signature_start": "fn from(p: &'a G2Projective) -> G2Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:67:from",
+          "name": "from",
+          "line": 67,
+          "signature_start": "fn from(p: G2Projective) -> G2Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:73:ct_eq",
+          "name": "ct_eq",
+          "line": 73,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:87:conditional_select",
+          "name": "conditional_select",
+          "line": 87,
+          "signature_start": "fn conditional_select(a: &Self, b: &Self, choice: Choice) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:99:eq",
+          "name": "eq",
+          "line": 99,
+          "signature_start": "fn eq(&self, other: &Self) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:108:neg",
+          "name": "neg",
+          "line": 108,
+          "signature_start": "fn neg(self) -> G2Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:121:neg",
+          "name": "neg",
+          "line": 121,
+          "signature_start": "fn neg(self) -> G2Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:130:add",
+          "name": "add",
+          "line": 130,
+          "signature_start": "fn add(self, rhs: &'b G2Projective) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:139:add",
+          "name": "add",
+          "line": 139,
+          "signature_start": "fn add(self, rhs: &'b G2Affine) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:148:sub",
+          "name": "sub",
+          "line": 148,
+          "signature_start": "fn sub(self, rhs: &'b G2Projective) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:157:sub",
+          "name": "sub",
+          "line": 157,
+          "signature_start": "fn sub(self, rhs: &'b G2Affine) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:166:sum",
+          "name": "sum",
+          "line": 166,
+          "signature_start": "fn sum<I>(iter: I) -> Self",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:200:identity",
+          "name": "identity",
+          "line": 200,
+          "signature_start": "pub fn identity() -> G2Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:210:generator",
+          "name": "generator",
+          "line": 210,
+          "signature_start": "pub fn generator() -> G2Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:254:to_compressed",
+          "name": "to_compressed",
+          "line": 254,
+          "signature_start": "pub fn to_compressed(&self) -> [u8; 96] {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:284:to_uncompressed",
+          "name": "to_uncompressed",
+          "line": 284,
+          "signature_start": "pub fn to_uncompressed(&self) -> [u8; 192] {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:303:from_uncompressed",
+          "name": "from_uncompressed",
+          "line": 303,
+          "signature_start": "pub fn from_uncompressed(bytes: &[u8; 192]) -> CtOption<Self> {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:312:from_uncompressed_unchecked",
+          "name": "from_uncompressed_unchecked",
+          "line": 312,
+          "signature_start": "pub fn from_uncompressed_unchecked(bytes: &[u8; 192]) -> CtOption<Self> {",
+          "contract": "UNCHECKED_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:390:from_compressed",
+          "name": "from_compressed",
+          "line": 390,
+          "signature_start": "pub fn from_compressed(bytes: &[u8; 96]) -> CtOption<Self> {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:401:from_compressed_unchecked",
+          "name": "from_compressed_unchecked",
+          "line": 401,
+          "signature_start": "pub fn from_compressed_unchecked(bytes: &[u8; 96]) -> CtOption<Self> {",
+          "contract": "UNCHECKED_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:468:is_identity",
+          "name": "is_identity",
+          "line": 468,
+          "signature_start": "pub fn is_identity(&self) -> Choice {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:475:is_torsion_free",
+          "name": "is_torsion_free",
+          "line": 475,
+          "signature_start": "pub fn is_torsion_free(&self) -> Choice {",
+          "contract": "SUBGROUP",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:486:is_on_curve",
+          "name": "is_on_curve",
+          "line": 486,
+          "signature_start": "pub fn is_on_curve(&self) -> Choice {",
+          "contract": "SUBGROUP",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:502:default",
+          "name": "default",
+          "line": 502,
+          "signature_start": "fn default() -> G2Projective {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:511:fmt",
+          "name": "fmt",
+          "line": 511,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:517:from",
+          "name": "from",
+          "line": 517,
+          "signature_start": "fn from(p: &'a G2Affine) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:527:from",
+          "name": "from",
+          "line": 527,
+          "signature_start": "fn from(p: G2Affine) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:533:ct_eq",
+          "name": "ct_eq",
+          "line": 533,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:552:conditional_select",
+          "name": "conditional_select",
+          "line": 552,
+          "signature_start": "fn conditional_select(a: &Self, b: &Self, choice: Choice) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:564:eq",
+          "name": "eq",
+          "line": 564,
+          "signature_start": "fn eq(&self, other: &Self) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:573:neg",
+          "name": "neg",
+          "line": 573,
+          "signature_start": "fn neg(self) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:586:neg",
+          "name": "neg",
+          "line": 586,
+          "signature_start": "fn neg(self) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:595:add",
+          "name": "add",
+          "line": 595,
+          "signature_start": "fn add(self, rhs: &'b G2Projective) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:604:sub",
+          "name": "sub",
+          "line": 604,
+          "signature_start": "fn sub(self, rhs: &'b G2Projective) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:612:mul",
+          "name": "mul",
+          "line": 612,
+          "signature_start": "fn mul(self, other: &'b Scalar) -> Self::Output {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:621:mul",
+          "name": "mul",
+          "line": 621,
+          "signature_start": "fn mul(self, rhs: &'b G2Projective) -> Self::Output {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:629:mul",
+          "name": "mul",
+          "line": 629,
+          "signature_start": "fn mul(self, other: &'b Scalar) -> Self::Output {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:638:mul",
+          "name": "mul",
+          "line": 638,
+          "signature_start": "fn mul(self, rhs: &'b G2Affine) -> Self::Output {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:650:mul_by_3b",
+          "name": "mul_by_3b",
+          "line": 650,
+          "signature_start": "fn mul_by_3b(x: Fp2) -> Fp2 {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:656:identity",
+          "name": "identity",
+          "line": 656,
+          "signature_start": "pub fn identity() -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:666:generator",
+          "name": "generator",
+          "line": 666,
+          "signature_start": "pub fn generator() -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:709:double",
+          "name": "double",
+          "line": 709,
+          "signature_start": "pub fn double(&self) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:741:add",
+          "name": "add",
+          "line": 741,
+          "signature_start": "pub fn add(&self, rhs: &G2Projective) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:786:add_mixed",
+          "name": "add_mixed",
+          "line": 786,
+          "signature_start": "pub fn add_mixed(&self, rhs: &G2Affine) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:825:multiply",
+          "name": "multiply",
+          "line": 825,
+          "signature_start": "fn multiply(&self, by: &[u8]) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:847:psi",
+          "name": "psi",
+          "line": 847,
+          "signature_start": "fn psi(&self) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:890:psi2",
+          "name": "psi2",
+          "line": 890,
+          "signature_start": "fn psi2(&self) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:915:mul_by_x",
+          "name": "mul_by_x",
+          "line": 915,
+          "signature_start": "fn mul_by_x(&self) -> G2Projective {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:938:clear_cofactor",
+          "name": "clear_cofactor",
+          "line": 938,
+          "signature_start": "pub fn clear_cofactor(&self) -> G2Projective {",
+          "contract": "SUBGROUP",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:951:batch_normalize",
+          "name": "batch_normalize",
+          "line": 951,
+          "signature_start": "pub fn batch_normalize(p: &[Self], q: &mut [G2Affine]) {",
+          "contract": "BATCH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:988:is_identity",
+          "name": "is_identity",
+          "line": 988,
+          "signature_start": "pub fn is_identity(&self) -> Choice {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:994:is_on_curve",
+          "name": "is_on_curve",
+          "line": 994,
+          "signature_start": "pub fn is_on_curve(&self) -> Choice {",
+          "contract": "SUBGROUP",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1006:fmt",
+          "name": "fmt",
+          "line": 1006,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1012:default",
+          "name": "default",
+          "line": 1012,
+          "signature_start": "fn default() -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1021:as_ref",
+          "name": "as_ref",
+          "line": 1021,
+          "signature_start": "fn as_ref(&self) -> &[u8] {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1027:as_mut",
+          "name": "as_mut",
+          "line": 1027,
+          "signature_start": "fn as_mut(&mut self) -> &mut [u8] {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1033:ct_eq",
+          "name": "ct_eq",
+          "line": 1033,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1041:eq",
+          "name": "eq",
+          "line": 1041,
+          "signature_start": "fn eq(&self, other: &Self) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1050:fmt",
+          "name": "fmt",
+          "line": 1050,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1056:default",
+          "name": "default",
+          "line": 1056,
+          "signature_start": "fn default() -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1065:as_ref",
+          "name": "as_ref",
+          "line": 1065,
+          "signature_start": "fn as_ref(&self) -> &[u8] {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1071:as_mut",
+          "name": "as_mut",
+          "line": 1071,
+          "signature_start": "fn as_mut(&mut self) -> &mut [u8] {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1077:ct_eq",
+          "name": "ct_eq",
+          "line": 1077,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1085:eq",
+          "name": "eq",
+          "line": 1085,
+          "signature_start": "fn eq(&self, other: &Self) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1093:try_random",
+          "name": "try_random",
+          "line": 1093,
+          "signature_start": "fn try_random<R: TryRng + ?Sized>(rng: &mut R) -> Result<Self, R::Error> {",
+          "contract": "RANDOM",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1115:identity",
+          "name": "identity",
+          "line": 1115,
+          "signature_start": "fn identity() -> Self {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1119:generator",
+          "name": "generator",
+          "line": 1119,
+          "signature_start": "fn generator() -> Self {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1123:is_identity",
+          "name": "is_identity",
+          "line": 1123,
+          "signature_start": "fn is_identity(&self) -> Choice {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1128:double",
+          "name": "double",
+          "line": 1128,
+          "signature_start": "fn double(&self) -> Self {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1135:recommended_wnaf_for_num_scalars",
+          "name": "recommended_wnaf_for_num_scalars",
+          "line": 1135,
+          "signature_start": "fn recommended_wnaf_for_num_scalars(num_scalars: usize) -> usize {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1156:batch_normalize",
+          "name": "batch_normalize",
+          "line": 1156,
+          "signature_start": "fn batch_normalize(p: &[Self], q: &mut [Self::Affine]) {",
+          "contract": "BATCH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1160:to_affine",
+          "name": "to_affine",
+          "line": 1160,
+          "signature_start": "fn to_affine(&self) -> Self::Affine {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1171:identity",
+          "name": "identity",
+          "line": 1171,
+          "signature_start": "fn identity() -> Self {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1175:generator",
+          "name": "generator",
+          "line": 1175,
+          "signature_start": "fn generator() -> Self {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1179:is_identity",
+          "name": "is_identity",
+          "line": 1179,
+          "signature_start": "fn is_identity(&self) -> Choice {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1183:to_curve",
+          "name": "to_curve",
+          "line": 1183,
+          "signature_start": "fn to_curve(&self) -> Self::Curve {",
+          "contract": "CURVE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1191:from_bytes",
+          "name": "from_bytes",
+          "line": 1191,
+          "signature_start": "fn from_bytes(bytes: &Self::Repr) -> CtOption<Self> {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1195:from_bytes_unchecked",
+          "name": "from_bytes_unchecked",
+          "line": 1195,
+          "signature_start": "fn from_bytes_unchecked(bytes: &Self::Repr) -> CtOption<Self> {",
+          "contract": "UNCHECKED_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1199:to_bytes",
+          "name": "to_bytes",
+          "line": 1199,
+          "signature_start": "fn to_bytes(&self) -> Self::Repr {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1207:from_bytes",
+          "name": "from_bytes",
+          "line": 1207,
+          "signature_start": "fn from_bytes(bytes: &Self::Repr) -> CtOption<Self> {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1211:from_bytes_unchecked",
+          "name": "from_bytes_unchecked",
+          "line": 1211,
+          "signature_start": "fn from_bytes_unchecked(bytes: &Self::Repr) -> CtOption<Self> {",
+          "contract": "UNCHECKED_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1215:to_bytes",
+          "name": "to_bytes",
+          "line": 1215,
+          "signature_start": "fn to_bytes(&self) -> Self::Repr {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1223:from_uncompressed",
+          "name": "from_uncompressed",
+          "line": 1223,
+          "signature_start": "fn from_uncompressed(bytes: &Self::Uncompressed) -> CtOption<Self> {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1227:from_uncompressed_unchecked",
+          "name": "from_uncompressed_unchecked",
+          "line": 1227,
+          "signature_start": "fn from_uncompressed_unchecked(bytes: &Self::Uncompressed) -> CtOption<Self> {",
+          "contract": "UNCHECKED_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/g2.rs:1231:to_uncompressed",
+          "name": "to_uncompressed",
+          "line": 1231,
+          "signature_start": "fn to_uncompressed(&self) -> Self::Uncompressed {",
+          "contract": "POINT_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/hash_to_curve/chain.rs",
+      "test_region_start": 866,
+      "functions": [
+        {
+          "id": "src/hash_to_curve/chain.rs:21:chain_pm3div4",
+          "name": "chain_pm3div4",
+          "line": 21,
+          "signature_start": "pub fn chain_pm3div4(var0: &Fp) -> Fp {",
+          "contract": "POWER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/chain.rs:328:chain_p2m9div16",
+          "name": "chain_p2m9div16",
+          "line": 328,
+          "signature_start": "pub fn chain_p2m9div16(var0: &Fp2) -> Fp2 {",
+          "contract": "POWER",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/hash_to_curve/expand_msg.rs",
+      "test_region_start": null,
+      "functions": [
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:35:new",
+          "name": "new",
+          "line": 35,
+          "signature_start": "fn new(init: impl FnOnce(&mut [u8; MAX_DST_LENGTH]) -> usize) -> Self {",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:49:for_xof",
+          "name": "for_xof",
+          "line": 49,
+          "signature_start": "fn for_xof<H, L>(dst: &[u8]) -> Self",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:74:for_xmd",
+          "name": "for_xmd",
+          "line": 74,
+          "signature_start": "fn for_xmd<H>(dst: &[u8]) -> Self",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:97:data",
+          "name": "data",
+          "line": 97,
+          "signature_start": "fn data(&self) -> &[u8] {",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:102:len",
+          "name": "len",
+          "line": 102,
+          "signature_start": "fn len(&self) -> usize {",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:113:input_message",
+          "name": "input_message",
+          "line": 113,
+          "signature_start": "fn input_message(self, f: impl FnMut(&[u8]));",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:121:input_message",
+          "name": "input_message",
+          "line": 121,
+          "signature_start": "fn input_message(self, mut f: impl FnMut(&[u8])) {",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:135:init_expand",
+          "name": "init_expand",
+          "line": 135,
+          "signature_start": "fn init_expand<M, L>(message: M, dst: &[u8], len_in_bytes: usize) -> Self",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:141:read_into",
+          "name": "read_into",
+          "line": 141,
+          "signature_start": "fn read_into(&mut self, output: &mut [u8]) -> usize;",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:144:remain",
+          "name": "remain",
+          "line": 144,
+          "signature_start": "fn remain(&self) -> usize;",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:148:into_vec",
+          "name": "into_vec",
+          "line": 148,
+          "signature_start": "fn into_vec(mut self) -> Vec<u8>",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:173:fmt",
+          "name": "fmt",
+          "line": 173,
+          "signature_start": "fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:184:init_expand",
+          "name": "init_expand",
+          "line": 184,
+          "signature_start": "fn init_expand<M, L>(message: M, dst: &[u8], len_in_bytes: usize) -> Self",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:207:read_into",
+          "name": "read_into",
+          "line": 207,
+          "signature_start": "fn read_into(&mut self, output: &mut [u8]) -> usize {",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:214:remain",
+          "name": "remain",
+          "line": 214,
+          "signature_start": "fn remain(&self) -> usize {",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:240:fmt",
+          "name": "fmt",
+          "line": 240,
+          "signature_start": "fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:252:init_expand",
+          "name": "init_expand",
+          "line": 252,
+          "signature_start": "fn init_expand<M, L>(message: M, dst: &[u8], len_in_bytes: usize) -> Self",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:293:read_into",
+          "name": "read_into",
+          "line": 293,
+          "signature_start": "fn read_into(&mut self, output: &mut [u8]) -> usize {",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/expand_msg.rs:325:remain",
+          "name": "remain",
+          "line": 325,
+          "signature_start": "fn remain(&self) -> usize {",
+          "contract": "EXPAND",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/hash_to_curve/map_g1.rs",
+      "test_region_start": 645,
+      "functions": [
+        {
+          "id": "src/hash_to_curve/map_g1.rs:513:from_okm",
+          "name": "from_okm",
+          "line": 513,
+          "signature_start": "fn from_okm(okm: &GenericArray<u8, U64>) -> Fp {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/map_g1.rs:535:sgn0",
+          "name": "sgn0",
+          "line": 535,
+          "signature_start": "fn sgn0(&self) -> Choice {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/map_g1.rs:550:map_to_curve_simple_swu",
+          "name": "map_to_curve_simple_swu",
+          "line": 550,
+          "signature_start": "fn map_to_curve_simple_swu(u: &Fp) -> G1Projective {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/map_g1.rs:589:iso_map",
+          "name": "iso_map",
+          "line": 589,
+          "signature_start": "fn iso_map(u: &G1Projective) -> G1Projective {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/map_g1.rs:635:map_to_curve",
+          "name": "map_to_curve",
+          "line": 635,
+          "signature_start": "fn map_to_curve(u: &Fp) -> G1Projective {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/map_g1.rs:640:clear_h",
+          "name": "clear_h",
+          "line": 640,
+          "signature_start": "fn clear_h(&self) -> Self {",
+          "contract": "SUBGROUP",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/hash_to_curve/map_g2.rs",
+      "test_region_start": 507,
+      "functions": [
+        {
+          "id": "src/hash_to_curve/map_g2.rs:374:from_okm",
+          "name": "from_okm",
+          "line": 374,
+          "signature_start": "fn from_okm(okm: &GenericArray<u8, U128>) -> Fp2 {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/map_g2.rs:382:sgn0",
+          "name": "sgn0",
+          "line": 382,
+          "signature_start": "fn sgn0(&self) -> Choice {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/map_g2.rs:391:map_to_curve_simple_swu",
+          "name": "map_to_curve_simple_swu",
+          "line": 391,
+          "signature_start": "fn map_to_curve_simple_swu(u: &Fp2) -> G2Projective {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/map_g2.rs:457:iso_map",
+          "name": "iso_map",
+          "line": 457,
+          "signature_start": "fn iso_map(u: &G2Projective) -> G2Projective {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/map_g2.rs:497:map_to_curve",
+          "name": "map_to_curve",
+          "line": 497,
+          "signature_start": "fn map_to_curve(u: &Fp2) -> G2Projective {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/map_g2.rs:502:clear_h",
+          "name": "clear_h",
+          "line": 502,
+          "signature_start": "fn clear_h(&self) -> Self {",
+          "contract": "SUBGROUP",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/hash_to_curve/map_scalar.rs",
+      "test_region_start": 25,
+      "functions": [
+        {
+          "id": "src/hash_to_curve/map_scalar.rs:17:from_okm",
+          "name": "from_okm",
+          "line": 17,
+          "signature_start": "fn from_okm(okm: &GenericArray<u8, U48>) -> Scalar {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/hash_to_curve/mod.rs",
+      "test_region_start": null,
+      "functions": [
+        {
+          "id": "src/hash_to_curve/mod.rs:43:from_okm",
+          "name": "from_okm",
+          "line": 43,
+          "signature_start": "fn from_okm(okm: &GenericArray<u8, Self::InputLength>) -> Self;",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/mod.rs:51:hash_to_field",
+          "name": "hash_to_field",
+          "line": 51,
+          "signature_start": "fn hash_to_field<X, M>(message: M, dst: &[u8], output: &mut [Self])",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/mod.rs:74:map_to_curve",
+          "name": "map_to_curve",
+          "line": 74,
+          "signature_start": "fn map_to_curve(elt: &Self::Field) -> Self;",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/mod.rs:77:clear_h",
+          "name": "clear_h",
+          "line": 77,
+          "signature_start": "fn clear_h(&self) -> Self;",
+          "contract": "SUBGROUP",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/mod.rs:86:hash_to_curve",
+          "name": "hash_to_curve",
+          "line": 86,
+          "signature_start": "fn hash_to_curve<M: Message>(message: M, dst: &[u8]) -> Self {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/mod.rs:103:encode_to_curve",
+          "name": "encode_to_curve",
+          "line": 103,
+          "signature_start": "fn encode_to_curve<M: Message>(message: M, dst: &[u8]) -> Self {",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/hash_to_curve/mod.rs:123:sgn0",
+          "name": "sgn0",
+          "line": 123,
+          "signature_start": "fn sgn0(&self) -> Choice;",
+          "contract": "HASH",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/lib.rs",
+      "test_region_start": 29,
+      "functions": []
+    },
+    {
+      "source": "src/notes/design.rs",
+      "test_region_start": null,
+      "functions": []
+    },
+    {
+      "source": "src/notes/serialization.rs",
+      "test_region_start": null,
+      "functions": []
+    },
+    {
+      "source": "src/pairings.rs",
+      "test_region_start": 824,
+      "functions": [
+        {
+          "id": "src/pairings.rs:29:default",
+          "name": "default",
+          "line": 29,
+          "signature_start": "fn default() -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:38:conditional_select",
+          "name": "conditional_select",
+          "line": 38,
+          "signature_start": "fn conditional_select(a: &Self, b: &Self, choice: Choice) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:48:final_exponentiation",
+          "name": "final_exponentiation",
+          "line": 48,
+          "signature_start": "pub fn final_exponentiation(&self) -> Gt {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:50:fp4_square",
+          "name": "fp4_square",
+          "line": 50,
+          "signature_start": "fn fp4_square(a: Fp2, b: Fp2) -> (Fp2, Fp2) {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:66:cyclotomic_square",
+          "name": "cyclotomic_square",
+          "line": 66,
+          "signature_start": "fn cyclotomic_square(f: Fp12) -> Fp12 {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:115:cycolotomic_exp",
+          "name": "cycolotomic_exp",
+          "line": 115,
+          "signature_start": "fn cycolotomic_exp(f: Fp12) -> Fp12 {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:181:add",
+          "name": "add",
+          "line": 181,
+          "signature_start": "fn add(self, rhs: &'b MillerLoopResult) -> MillerLoopResult {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:190:add_assign",
+          "name": "add_assign",
+          "line": 190,
+          "signature_start": "fn add_assign(&mut self, rhs: MillerLoopResult) {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:197:add_assign",
+          "name": "add_assign",
+          "line": 197,
+          "signature_start": "fn add_assign(&mut self, rhs: &'b MillerLoopResult) {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:212:default",
+          "name": "default",
+          "line": 212,
+          "signature_start": "fn default() -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:221:fmt",
+          "name": "fmt",
+          "line": 221,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:227:ct_eq",
+          "name": "ct_eq",
+          "line": 227,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:233:conditional_select",
+          "name": "conditional_select",
+          "line": 233,
+          "signature_start": "fn conditional_select(a: &Self, b: &Self, choice: Choice) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:241:eq",
+          "name": "eq",
+          "line": 241,
+          "signature_start": "fn eq(&self, other: &Self) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:248:identity",
+          "name": "identity",
+          "line": 248,
+          "signature_start": "pub fn identity() -> Gt {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:253:double",
+          "name": "double",
+          "line": 253,
+          "signature_start": "pub fn double(&self) -> Gt {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:262:neg",
+          "name": "neg",
+          "line": 262,
+          "signature_start": "fn neg(self) -> Gt {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:272:neg",
+          "name": "neg",
+          "line": 272,
+          "signature_start": "fn neg(self) -> Gt {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:281:add",
+          "name": "add",
+          "line": 281,
+          "signature_start": "fn add(self, rhs: &'b Gt) -> Gt {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:290:sub",
+          "name": "sub",
+          "line": 290,
+          "signature_start": "fn sub(self, rhs: &'b Gt) -> Gt {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:298:mul",
+          "name": "mul",
+          "line": 298,
+          "signature_start": "fn mul(self, other: &'b Scalar) -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:329:sum",
+          "name": "sum",
+          "line": 329,
+          "signature_start": "fn sum<I>(iter: I) -> Self",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:340:try_random",
+          "name": "try_random",
+          "line": 340,
+          "signature_start": "fn try_random<R: TryRng + ?Sized>(rng: &mut R) -> Result<Self, R::Error> {",
+          "contract": "RANDOM",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:353:identity",
+          "name": "identity",
+          "line": 353,
+          "signature_start": "fn identity() -> Self {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:357:generator",
+          "name": "generator",
+          "line": 357,
+          "signature_start": "fn generator() -> Self {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:475:is_identity",
+          "name": "is_identity",
+          "line": 475,
+          "signature_start": "fn is_identity(&self) -> Choice {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:480:double",
+          "name": "double",
+          "line": 480,
+          "signature_start": "fn double(&self) -> Self {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:503:from",
+          "name": "from",
+          "line": 503,
+          "signature_start": "fn from(q: G2Affine) -> G2Prepared {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:513:doubling_step",
+          "name": "doubling_step",
+          "line": 513,
+          "signature_start": "fn doubling_step(&mut self, _: Self::Output) -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:517:addition_step",
+          "name": "addition_step",
+          "line": 517,
+          "signature_start": "fn addition_step(&mut self, _: Self::Output) -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:521:square_output",
+          "name": "square_output",
+          "line": 521,
+          "signature_start": "fn square_output(_: Self::Output) -> Self::Output {}",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:522:conjugate",
+          "name": "conjugate",
+          "line": 522,
+          "signature_start": "fn conjugate(_: Self::Output) -> Self::Output {}",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:523:one",
+          "name": "one",
+          "line": 523,
+          "signature_start": "fn one() -> Self::Output {}",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:552:multi_miller_loop",
+          "name": "multi_miller_loop",
+          "line": 552,
+          "signature_start": "pub fn multi_miller_loop(terms: &[(&G1Affine, &G2Prepared)]) -> MillerLoopResult {",
+          "contract": "PREPARED",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:561:doubling_step",
+          "name": "doubling_step",
+          "line": 561,
+          "signature_start": "fn doubling_step(&mut self, mut f: Self::Output) -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:573:addition_step",
+          "name": "addition_step",
+          "line": 573,
+          "signature_start": "fn addition_step(&mut self, mut f: Self::Output) -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:585:square_output",
+          "name": "square_output",
+          "line": 585,
+          "signature_start": "fn square_output(f: Self::Output) -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:588:conjugate",
+          "name": "conjugate",
+          "line": 588,
+          "signature_start": "fn conjugate(f: Self::Output) -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:591:one",
+          "name": "one",
+          "line": 591,
+          "signature_start": "fn one() -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:605:pairing",
+          "name": "pairing",
+          "line": 605,
+          "signature_start": "pub fn pairing(p: &G1Affine, q: &G2Affine) -> Gt {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:615:doubling_step",
+          "name": "doubling_step",
+          "line": 615,
+          "signature_start": "fn doubling_step(&mut self, f: Self::Output) -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:619:addition_step",
+          "name": "addition_step",
+          "line": 619,
+          "signature_start": "fn addition_step(&mut self, f: Self::Output) -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:623:square_output",
+          "name": "square_output",
+          "line": 623,
+          "signature_start": "fn square_output(f: Self::Output) -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:626:conjugate",
+          "name": "conjugate",
+          "line": 626,
+          "signature_start": "fn conjugate(f: Self::Output) -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:629:one",
+          "name": "one",
+          "line": 629,
+          "signature_start": "fn one() -> Self::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:656:doubling_step",
+          "name": "doubling_step",
+          "line": 656,
+          "signature_start": "fn doubling_step(&mut self, f: Self::Output) -> Self::Output;",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:657:addition_step",
+          "name": "addition_step",
+          "line": 657,
+          "signature_start": "fn addition_step(&mut self, f: Self::Output) -> Self::Output;",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:658:square_output",
+          "name": "square_output",
+          "line": 658,
+          "signature_start": "fn square_output(f: Self::Output) -> Self::Output;",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:659:conjugate",
+          "name": "conjugate",
+          "line": 659,
+          "signature_start": "fn conjugate(f: Self::Output) -> Self::Output;",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:660:one",
+          "name": "one",
+          "line": 660,
+          "signature_start": "fn one() -> Self::Output;",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:666:miller_loop",
+          "name": "miller_loop",
+          "line": 666,
+          "signature_start": "fn miller_loop<D: MillerLoopDriver>(driver: &mut D) -> D::Output {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:694:ell",
+          "name": "ell",
+          "line": 694,
+          "signature_start": "fn ell(f: Fp12, coeffs: &(Fp2, Fp2, Fp2), p: &G1Affine) -> Fp12 {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:707:doubling_step",
+          "name": "doubling_step",
+          "line": 707,
+          "signature_start": "fn doubling_step(r: &mut G2Projective) -> (Fp2, Fp2, Fp2) {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:738:addition_step",
+          "name": "addition_step",
+          "line": 738,
+          "signature_start": "fn addition_step(r: &mut G2Projective, q: &G2Affine) -> (Fp2, Fp2, Fp2) {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:774:pairing_with",
+          "name": "pairing_with",
+          "line": 774,
+          "signature_start": "fn pairing_with(&self, other: &Self::Pair) -> Self::PairingResult {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:783:pairing_with",
+          "name": "pairing_with",
+          "line": 783,
+          "signature_start": "fn pairing_with(&self, other: &Self::Pair) -> Self::PairingResult {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:801:pairing",
+          "name": "pairing",
+          "line": 801,
+          "signature_start": "fn pairing(p: &Self::G1Affine, q: &Self::G2Affine) -> Self::Gt {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:809:final_exponentiation",
+          "name": "final_exponentiation",
+          "line": 809,
+          "signature_start": "fn final_exponentiation(&self) -> Self::Gt {",
+          "contract": "PAIRING",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/pairings.rs:819:multi_miller_loop",
+          "name": "multi_miller_loop",
+          "line": 819,
+          "signature_start": "fn multi_miller_loop(terms: &[(&Self::G1Affine, &Self::G2Prepared)]) -> Self::Result {",
+          "contract": "PREPARED",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/scalar.rs",
+      "test_region_start": 786,
+      "functions": [
+        {
+          "id": "src/scalar.rs:25:fmt",
+          "name": "fmt",
+          "line": 25,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:36:fmt",
+          "name": "fmt",
+          "line": 36,
+          "signature_start": "fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {",
+          "contract": "FORMAT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:42:from",
+          "name": "from",
+          "line": 42,
+          "signature_start": "fn from(val: u64) -> Scalar {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:48:ct_eq",
+          "name": "ct_eq",
+          "line": 48,
+          "signature_start": "fn ct_eq(&self, other: &Self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:58:eq",
+          "name": "eq",
+          "line": 58,
+          "signature_start": "fn eq(&self, other: &Self) -> bool {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:64:conditional_select",
+          "name": "conditional_select",
+          "line": 64,
+          "signature_start": "fn conditional_select(a: &Self, b: &Self, choice: Choice) -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:111:neg",
+          "name": "neg",
+          "line": 111,
+          "signature_start": "fn neg(self) -> Scalar {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:120:neg",
+          "name": "neg",
+          "line": 120,
+          "signature_start": "fn neg(self) -> Scalar {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:129:sub",
+          "name": "sub",
+          "line": 129,
+          "signature_start": "fn sub(self, rhs: &'b Scalar) -> Scalar {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:138:add",
+          "name": "add",
+          "line": 138,
+          "signature_start": "fn add(self, rhs: &'b Scalar) -> Scalar {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:147:mul",
+          "name": "mul",
+          "line": 147,
+          "signature_start": "fn mul(self, rhs: &'b Scalar) -> Scalar {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:226:default",
+          "name": "default",
+          "line": 226,
+          "signature_start": "fn default() -> Self {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:237:zero",
+          "name": "zero",
+          "line": 237,
+          "signature_start": "pub const fn zero() -> Scalar {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:243:one",
+          "name": "one",
+          "line": 243,
+          "signature_start": "pub const fn one() -> Scalar {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:249:double",
+          "name": "double",
+          "line": 249,
+          "signature_start": "pub const fn double(&self) -> Scalar {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:256:from_bytes",
+          "name": "from_bytes",
+          "line": 256,
+          "signature_start": "pub fn from_bytes(bytes: &[u8; 32]) -> CtOption<Scalar> {",
+          "contract": "FIELD_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:284:to_bytes",
+          "name": "to_bytes",
+          "line": 284,
+          "signature_start": "pub fn to_bytes(&self) -> [u8; 32] {",
+          "contract": "FIELD_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:300:from_bytes_wide",
+          "name": "from_bytes_wide",
+          "line": 300,
+          "signature_start": "pub fn from_bytes_wide(bytes: &[u8; 64]) -> Scalar {",
+          "contract": "FIELD_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:313:from_u512",
+          "name": "from_u512",
+          "line": 313,
+          "signature_start": "fn from_u512(limbs: [u64; 8]) -> Scalar {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:335:from_raw",
+          "name": "from_raw",
+          "line": 335,
+          "signature_start": "pub const fn from_raw(val: [u64; 4]) -> Self {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:341:square",
+          "name": "square",
+          "line": 341,
+          "signature_start": "pub const fn square(&self) -> Scalar {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:373:pow",
+          "name": "pow",
+          "line": 373,
+          "signature_start": "pub fn pow(&self, by: &[u64; 4]) -> Self {",
+          "contract": "POWER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:392:pow_vartime",
+          "name": "pow_vartime",
+          "line": 392,
+          "signature_start": "pub fn pow_vartime(&self, by: &[u64; 4]) -> Self {",
+          "contract": "POWER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:408:invert",
+          "name": "invert",
+          "line": 408,
+          "signature_start": "pub fn invert(&self) -> CtOption<Self> {",
+          "contract": "ROOT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:410:square_assign_multi",
+          "name": "square_assign_multi",
+          "line": 410,
+          "signature_start": "fn square_assign_multi(n: &mut Scalar, num_times: usize) {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:506:montgomery_reduce",
+          "name": "montgomery_reduce",
+          "line": 506,
+          "signature_start": "const fn montgomery_reduce(",
+          "contract": "REDUCE",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:554:mul",
+          "name": "mul",
+          "line": 554,
+          "signature_start": "pub const fn mul(&self, rhs: &Self) -> Self {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:582:sub",
+          "name": "sub",
+          "line": 582,
+          "signature_start": "pub const fn sub(&self, rhs: &Self) -> Self {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:600:add",
+          "name": "add",
+          "line": 600,
+          "signature_start": "pub const fn add(&self, rhs: &Self) -> Self {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:613:neg",
+          "name": "neg",
+          "line": 613,
+          "signature_start": "pub const fn neg(&self) -> Self {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:631:from",
+          "name": "from",
+          "line": 631,
+          "signature_start": "fn from(value: Scalar) -> [u8; 32] {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:637:from",
+          "name": "from",
+          "line": 637,
+          "signature_start": "fn from(value: &'a Scalar) -> [u8; 32] {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:646:try_random",
+          "name": "try_random",
+          "line": 646,
+          "signature_start": "fn try_random<R: TryRng + ?Sized>(rng: &mut R) -> Result<Self, R::Error> {",
+          "contract": "RANDOM",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:653:square",
+          "name": "square",
+          "line": 653,
+          "signature_start": "fn square(&self) -> Self {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:658:double",
+          "name": "double",
+          "line": 658,
+          "signature_start": "fn double(&self) -> Self {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:662:invert",
+          "name": "invert",
+          "line": 662,
+          "signature_start": "fn invert(&self) -> CtOption<Self> {",
+          "contract": "ROOT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:666:sqrt_ratio",
+          "name": "sqrt_ratio",
+          "line": 666,
+          "signature_start": "fn sqrt_ratio(num: &Self, div: &Self) -> (Choice, Self) {",
+          "contract": "ROOT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:670:sqrt",
+          "name": "sqrt",
+          "line": 670,
+          "signature_start": "fn sqrt(&self) -> CtOption<Self> {",
+          "contract": "ROOT",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:683:is_zero_vartime",
+          "name": "is_zero_vartime",
+          "line": 683,
+          "signature_start": "fn is_zero_vartime(&self) -> bool {",
+          "contract": "FIELD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:691:from_repr",
+          "name": "from_repr",
+          "line": 691,
+          "signature_start": "fn from_repr(r: Self::Repr) -> CtOption<Self> {",
+          "contract": "FIELD_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:695:to_repr",
+          "name": "to_repr",
+          "line": 695,
+          "signature_start": "fn to_repr(&self) -> Self::Repr {",
+          "contract": "FIELD_CODEC",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:699:is_odd",
+          "name": "is_odd",
+          "line": 699,
+          "signature_start": "fn is_odd(&self) -> Choice {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:725:to_le_bits",
+          "name": "to_le_bits",
+          "line": 725,
+          "signature_start": "fn to_le_bits(&self) -> FieldBits<Self::ReprBits> {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:751:char_le_bits",
+          "name": "char_le_bits",
+          "line": 751,
+          "signature_start": "fn char_le_bits() -> FieldBits<Self::ReprBits> {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:766:sum",
+          "name": "sum",
+          "line": 766,
+          "signature_start": "fn sum<I>(iter: I) -> Self",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/scalar.rs:778:product",
+          "name": "product",
+          "line": 778,
+          "signature_start": "fn product<I>(iter: I) -> Self",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    },
+    {
+      "source": "src/tests/mod.rs",
+      "test_region_start": 30,
+      "functions": []
+    },
+    {
+      "source": "src/util.rs",
+      "test_region_start": null,
+      "functions": [
+        {
+          "id": "src/util.rs:3:adc",
+          "name": "adc",
+          "line": 3,
+          "signature_start": "pub const fn adc(a: u64, b: u64, carry: u64) -> (u64, u64) {",
+          "contract": "WORD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:10:sbb",
+          "name": "sbb",
+          "line": 10,
+          "signature_start": "pub const fn sbb(a: u64, b: u64, borrow: u64) -> (u64, u64) {",
+          "contract": "WORD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:17:mac",
+          "name": "mac",
+          "line": 17,
+          "signature_start": "pub const fn mac(a: u64, b: u64, c: u64, carry: u64) -> (u64, u64) {",
+          "contract": "WORD",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:28:add",
+          "name": "add",
+          "line": 28,
+          "signature_start": "fn add(self, rhs: &'b $rhs) -> $output {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:37:add",
+          "name": "add",
+          "line": 37,
+          "signature_start": "fn add(self, rhs: $rhs) -> $output {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:46:add",
+          "name": "add",
+          "line": 46,
+          "signature_start": "fn add(self, rhs: $rhs) -> $output {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:59:sub",
+          "name": "sub",
+          "line": 59,
+          "signature_start": "fn sub(self, rhs: &'b $rhs) -> $output {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:68:sub",
+          "name": "sub",
+          "line": 68,
+          "signature_start": "fn sub(self, rhs: $rhs) -> $output {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:77:sub",
+          "name": "sub",
+          "line": 77,
+          "signature_start": "fn sub(self, rhs: $rhs) -> $output {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:97:mul",
+          "name": "mul",
+          "line": 97,
+          "signature_start": "fn mul(self, rhs: &'b $rhs) -> $output {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:106:mul",
+          "name": "mul",
+          "line": 106,
+          "signature_start": "fn mul(self, rhs: $rhs) -> $output {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:115:mul",
+          "name": "mul",
+          "line": 115,
+          "signature_start": "fn mul(self, rhs: $rhs) -> $output {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:128:sub_assign",
+          "name": "sub_assign",
+          "line": 128,
+          "signature_start": "fn sub_assign(&mut self, rhs: $rhs) {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:135:add_assign",
+          "name": "add_assign",
+          "line": 135,
+          "signature_start": "fn add_assign(&mut self, rhs: $rhs) {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:142:sub_assign",
+          "name": "sub_assign",
+          "line": 142,
+          "signature_start": "fn sub_assign(&mut self, rhs: &'b $rhs) {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:149:add_assign",
+          "name": "add_assign",
+          "line": 149,
+          "signature_start": "fn add_assign(&mut self, rhs: &'b $rhs) {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:162:mul_assign",
+          "name": "mul_assign",
+          "line": 162,
+          "signature_start": "fn mul_assign(&mut self, rhs: $rhs) {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        },
+        {
+          "id": "src/util.rs:169:mul_assign",
+          "name": "mul_assign",
+          "line": 169,
+          "signature_start": "fn mul_assign(&mut self, rhs: &'b $rhs) {",
+          "contract": "ADAPTER",
+          "proof_status": "not_started",
+          "theorem": null
+        }
+      ]
+    }
+  ]
+}

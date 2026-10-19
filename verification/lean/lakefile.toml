@@ -1,0 +1,12 @@
+name = "Bls12381Verification"
+version = "0.1.0"
+defaultTargets = ["Bls12381"]
+
+[[require]]
+name = "aeneas"
+git = "https://github.com/AeneasVerif/aeneas.git"
+subDir = "backends/lean"
+rev = "5d08da45a405913bbee6fd544e01debf8154ac9d"
+
+[[lean_lib]]
+name = "Bls12381"

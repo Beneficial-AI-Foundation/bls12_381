@@ -1,0 +1,591 @@
+{
+  "schema_version": 1,
+  "aeneas_commit": "5d08da45a405913bbee6fd544e01debf8154ac9d",
+  "cargo_args": [
+    "--locked",
+    "--offline",
+    "--no-default-features",
+    "--features",
+    "groups,pairings,alloc"
+  ],
+  "functions": [
+    {
+      "lean_name": "core.borrow.Borrow.Blanket.borrow",
+      "rust_name": "core::borrow::{impl core::borrow::Borrow<T> for T}::borrow",
+      "source": "/rustc/library/core/src/borrow.rs",
+      "span": "214:4-214:26",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "Shared0T.Insts.CoreBorrowBorrow.borrow",
+      "rust_name": "core::borrow::{impl core::borrow::Borrow<T> for &'_0 T}::borrow",
+      "source": "/rustc/library/core/src/borrow.rs",
+      "span": "230:4-230:26",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "TupleVUT.Insts.CoreFmtDebug.fmt",
+      "rust_name": "core::fmt::{impl core::fmt::Debug for (V, U, T)}::fmt",
+      "source": "/rustc/library/core/src/fmt/mod.rs",
+      "span": "3089:16-3089:62",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "Slice.Insts.CoreFmtDebug.fmt",
+      "rust_name": "core::fmt::{impl core::fmt::Debug for [T]}::fmt",
+      "source": "/rustc/library/core/src/fmt/mod.rs",
+      "span": "3122:4-3122:50",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "U8.Insts.CoreFmtLowerHex.fmt",
+      "rust_name": "core::fmt::num::{impl core::fmt::LowerHex for u8}::fmt",
+      "source": "/rustc/library/core/src/fmt/num.rs",
+      "span": "14:12-14:68",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "core.iter.traits.iterator.Iterator.map.default",
+      "rust_name": "core::iter::traits::iterator::Iterator::map",
+      "source": "/rustc/library/core/src/iter/traits/iterator.rs",
+      "span": "831:4-834:34",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "core.iter.adapters.map.Map.Insts.CoreIterTraitsIteratorIterator.next",
+      "rust_name": "core::iter::adapters::map::{impl core::iter::traits::iterator::Iterator<B> for core::iter::adapters::map::Map<I, F>}::next",
+      "source": "/rustc/library/core/src/iter/adapters/map.rs",
+      "span": "106:4-106:35",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "core.iter.adapters.rev.Rev.Insts.CoreIterTraitsIteratorIterator.fold",
+      "rust_name": "core::iter::adapters::rev::{impl core::iter::traits::iterator::Iterator<Clause0_Clause0_Item> for core::iter::adapters::rev::Rev<I>}::fold",
+      "source": "/rustc/library/core/src/iter/adapters/rev.rs",
+      "span": "79:4-81:41",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "core.iter.traits.iterator.Iterator.fold.default",
+      "rust_name": "core::iter::traits::iterator::Iterator::fold",
+      "source": "/rustc/library/core/src/iter/traits/iterator.rs",
+      "span": "2664:4-2667:64",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "core.ops.range.RangeFull.Insts.CoreSliceIndexSliceIndexSliceSlice.index_mut",
+      "rust_name": "core::slice::index::{impl core::slice::index::SliceIndex<[T], [T]> for core::ops::range::RangeFull}::index_mut",
+      "source": "/rustc/library/core/src/slice/index.rs",
+      "span": "660:4-660:51",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "core.ops.range.RangeFull.Insts.CoreSliceIndexSliceIndexSliceSlice.index",
+      "rust_name": "core::slice::index::{impl core::slice::index::SliceIndex<[T], [T]> for core::ops::range::RangeFull}::index",
+      "source": "/rustc/library/core/src/slice/index.rs",
+      "span": "655:4-655:39",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "core.ops.range.RangeFull.Insts.CoreSliceIndexSliceIndexSliceSlice.get_unchecked_mut",
+      "rust_name": "core::slice::index::{impl core::slice::index::SliceIndex<[T], [T]> for core::ops::range::RangeFull}::get_unchecked_mut",
+      "source": "/rustc/library/core/src/slice/index.rs",
+      "span": "650:4-650:66",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "core.ops.range.RangeFull.Insts.CoreSliceIndexSliceIndexSliceSlice.get_unchecked",
+      "rust_name": "core::slice::index::{impl core::slice::index::SliceIndex<[T], [T]> for core::ops::range::RangeFull}::get_unchecked",
+      "source": "/rustc/library/core/src/slice/index.rs",
+      "span": "645:4-645:66",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "core.ops.range.RangeFull.Insts.CoreSliceIndexSliceIndexSliceSlice.get_mut",
+      "rust_name": "core::slice::index::{impl core::slice::index::SliceIndex<[T], [T]> for core::ops::range::RangeFull}::get_mut",
+      "source": "/rustc/library/core/src/slice/index.rs",
+      "span": "640:4-640:57",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "core.ops.range.RangeFull.Insts.CoreSliceIndexSliceIndexSliceSlice.get",
+      "rust_name": "core::slice::index::{impl core::slice::index::SliceIndex<[T], [T]> for core::ops::range::RangeFull}::get",
+      "source": "/rustc/library/core/src/slice/index.rs",
+      "span": "635:4-635:45",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "core.slice.iter.Iter.Insts.CoreIterTraitsIteratorIteratorSharedAT.fold",
+      "rust_name": "core::slice::iter::{impl core::iter::traits::iterator::Iterator<&'a T> for core::slice::iter::Iter<'a, T>}::fold",
+      "source": "/rustc/library/core/src/slice/iter/macros.rs",
+      "span": "259:12-261:49",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "core.slice.iter.Iter.Insts.CoreIterTraitsDouble_endedDoubleEndedIteratorSharedT.next_back",
+      "rust_name": "core::slice::iter::{impl core::iter::traits::double_ended::DoubleEndedIterator<&'_ T> for core::slice::iter::Iter<'a, T>}::next_back",
+      "source": "/rustc/library/core/src/slice/iter/macros.rs",
+      "span": "438:12-438:52",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "ff.Field.is_zero_vartime.default",
+      "rust_name": "ff::Field::is_zero_vartime",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ff-0.14.0/src/lib.rs",
+      "span": "105:4-105:37",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "ff.Field.sqrt.default",
+      "rust_name": "ff::Field::sqrt",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ff-0.14.0/src/lib.rs",
+      "span": "158:4-158:36",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.Choice.Insts.CoreCloneClone.clone",
+      "rust_name": "subtle::{impl core::clone::Clone for subtle::Choice}::clone",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "119:15-119:20",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.Choice.Insts.CoreFmtDebug.fmt",
+      "rust_name": "subtle::{impl core::fmt::Debug for subtle::Choice}::fmt",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "119:22-119:27",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "Bool.Insts.CoreConvertFromChoice.from",
+      "rust_name": "subtle::{impl core::convert::From<subtle::Choice> for bool}::from",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "153:4-153:35",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.Choice.Insts.CoreOpsBitBitAndChoiceChoice.bitand",
+      "rust_name": "subtle::{impl core::ops::bit::BitAnd<subtle::Choice, subtle::Choice> for subtle::Choice}::bitand",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "162:4-162:42",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.Choice.Insts.CoreOpsBitBitOrChoiceChoice.bitor",
+      "rust_name": "subtle::{impl core::ops::bit::BitOr<subtle::Choice, subtle::Choice> for subtle::Choice}::bitor",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "177:4-177:41",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.Choice.Insts.CoreOpsBitBitXorChoiceChoice.bitxor",
+      "rust_name": "subtle::{impl core::ops::bit::BitXor<subtle::Choice, subtle::Choice> for subtle::Choice}::bitxor",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "192:4-192:42",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.Choice.Insts.CoreOpsBitNotChoice.not",
+      "rust_name": "subtle::{impl core::ops::bit::Not<subtle::Choice> for subtle::Choice}::not",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "207:4-207:26",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.Choice.Insts.CoreConvertFromU8.from",
+      "rust_name": "subtle::{impl core::convert::From<u8> for subtle::Choice}::from",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "238:4-238:32",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "Slice.Insts.SubtleConstantTimeEq.ct_eq",
+      "rust_name": "subtle::{impl subtle::ConstantTimeEq for [T]}::ct_eq",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "313:4-313:41",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "U8.Insts.SubtleConstantTimeEq.ct_eq",
+      "rust_name": "subtle::{impl subtle::ConstantTimeEq for u8}::ct_eq",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "348:12-348:51",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "U64.Insts.SubtleConstantTimeEq.ct_eq",
+      "rust_name": "subtle::{impl subtle::ConstantTimeEq for u64}::ct_eq",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "348:12-348:51",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.ConditionallySelectable.conditional_assign.default",
+      "rust_name": "subtle::ConditionallySelectable::conditional_assign",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "442:4-442:66",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "U64.Insts.SubtleConditionallySelectable.conditional_select",
+      "rust_name": "subtle::{impl subtle::ConditionallySelectable for u64}::conditional_select",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "513:12-513:77",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "U8.Insts.SubtleConditionallySelectable.conditional_select",
+      "rust_name": "subtle::{impl subtle::ConditionallySelectable for u8}::conditional_select",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "513:12-513:77",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.Choice.Insts.SubtleConditionallySelectable.conditional_select",
+      "rust_name": "subtle::{impl subtle::ConditionallySelectable for subtle::Choice}::conditional_select",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "570:4-570:69",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.CtOption.new",
+      "rust_name": "subtle::{subtle::CtOption<T>}::new",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "678:4-678:56",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.CtOption.unwrap",
+      "rust_name": "subtle::{subtle::CtOption<T>}::unwrap",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "700:4-700:28",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.CtOption.unwrap_or",
+      "rust_name": "subtle::{subtle::CtOption<T>}::unwrap_or",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "709:4-711:35",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.CtOption.map",
+      "rust_name": "subtle::{subtle::CtOption<T>}::map",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "751:4-754:26",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.CtOption.and_then",
+      "rust_name": "subtle::{subtle::CtOption<T>}::and_then",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "774:4-777:36",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "subtle.CtOption.or_else",
+      "rust_name": "subtle::{subtle::CtOption<T>}::or_else",
+      "source": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs",
+      "span": "792:4-795:35",
+      "local": false,
+      "reason": "External dependency interface not supplied by the pinned Aeneas Lean library",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "g1.G1Projective.multiply",
+      "rust_name": "bls12_381::g1::{bls12_381::g1::G1Projective}::multiply",
+      "source": "src/g1.rs",
+      "span": "754:4-774:5",
+      "local": true,
+      "reason": "Nested iterator closure translation failure; Gt forwarding wrappers share the opaque pattern",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "g1.G1Projective.batch_normalize",
+      "rust_name": "bls12_381::g1::{bls12_381::g1::G1Projective}::batch_normalize",
+      "source": "src/g1.rs",
+      "span": "806:4-839:5",
+      "local": true,
+      "reason": "Aeneas Unreachable error on mutable slice iterator in normalization",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "scalar.Scalar.Insts.FfField.sqrt",
+      "rust_name": "bls12_381::scalar::{impl ff::Field for bls12_381::scalar::Scalar}::sqrt",
+      "source": "src/scalar.rs",
+      "span": "670:4-681:5",
+      "local": true,
+      "reason": "Mixed recursive group between Scalar sqrt/sqrt_ratio and ff trait implementations",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "scalar.Scalar.Insts.FfField.sqrt_ratio",
+      "rust_name": "bls12_381::scalar::{impl ff::Field for bls12_381::scalar::Scalar}::sqrt_ratio",
+      "source": "src/scalar.rs",
+      "span": "666:4-668:5",
+      "local": true,
+      "reason": "Mixed recursive group between Scalar sqrt/sqrt_ratio and ff trait implementations",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "g1.G1Projective.Insts.GroupGroupScalarArrayU832.try_random",
+      "rust_name": "bls12_381::g1::{impl group::Group<bls12_381::scalar::Scalar, [u8; 32usize]> for bls12_381::g1::G1Projective}::try_random",
+      "source": "src/g1.rs",
+      "span": "948:4-968:5",
+      "local": true,
+      "reason": "Aeneas internal error on random point closure/control-flow",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "g1.G1Projective.Insts.GroupWnafWnafGroupScalarArrayU832.recommended_wnaf_for_num_scalars",
+      "rust_name": "bls12_381::g1::{impl group::wnaf::WnafGroup<bls12_381::scalar::Scalar, [u8; 32usize]> for bls12_381::g1::G1Projective}::recommended_wnaf_for_num_scalars",
+      "source": "src/g1.rs",
+      "span": "990:4-1004:5",
+      "local": true,
+      "reason": "Nested borrows in iteration over static recommendation table",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "g2.G2Projective.multiply",
+      "rust_name": "bls12_381::g2::{bls12_381::g2::G2Projective}::multiply",
+      "source": "src/g2.rs",
+      "span": "825:4-845:5",
+      "local": true,
+      "reason": "Nested iterator closure translation failure; Gt forwarding wrappers share the opaque pattern",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "g2.G2Projective.batch_normalize",
+      "rust_name": "bls12_381::g2::{bls12_381::g2::G2Projective}::batch_normalize",
+      "source": "src/g2.rs",
+      "span": "951:4-984:5",
+      "local": true,
+      "reason": "Aeneas Unreachable error on mutable slice iterator in normalization",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "g2.G2Projective.Insts.GroupGroupScalarArrayU832.try_random",
+      "rust_name": "bls12_381::g2::{impl group::Group<bls12_381::scalar::Scalar, [u8; 32usize]> for bls12_381::g2::G2Projective}::try_random",
+      "source": "src/g2.rs",
+      "span": "1093:4-1113:5",
+      "local": true,
+      "reason": "Aeneas internal error on random point closure/control-flow",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "g2.G2Projective.Insts.GroupWnafWnafGroupScalarArrayU832.recommended_wnaf_for_num_scalars",
+      "rust_name": "bls12_381::g2::{impl group::wnaf::WnafGroup<bls12_381::scalar::Scalar, [u8; 32usize]> for bls12_381::g2::G2Projective}::recommended_wnaf_for_num_scalars",
+      "source": "src/g2.rs",
+      "span": "1135:4-1148:5",
+      "local": true,
+      "reason": "Nested borrows in iteration over static recommendation table",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "Shared0Gt.Insts.CoreOpsArithMulSharedBScalarGt.mul",
+      "rust_name": "bls12_381::pairings::{impl core::ops::arith::Mul<&'b bls12_381::scalar::Scalar, bls12_381::pairings::Gt> for &'_1 bls12_381::pairings::Gt}::mul",
+      "source": "src/pairings.rs",
+      "span": "298:4-319:5",
+      "local": true,
+      "reason": "Nested iterator closure translation failure; Gt forwarding wrappers share the opaque pattern",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "pairings.Gt.Insts.CoreOpsArithMulScalarGt.mul",
+      "rust_name": "bls12_381::pairings::{impl core::ops::arith::Mul<bls12_381::scalar::Scalar, bls12_381::pairings::Gt> for bls12_381::pairings::Gt}::mul",
+      "source": "src/util.rs",
+      "span": "115:12-117:13",
+      "local": true,
+      "reason": "Nested iterator closure translation failure; Gt forwarding wrappers share the opaque pattern",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "pairings.Gt.Insts.CoreOpsArithMulSharedBScalarGt.mul",
+      "rust_name": "bls12_381::pairings::{impl core::ops::arith::Mul<&'b bls12_381::scalar::Scalar, bls12_381::pairings::Gt> for bls12_381::pairings::Gt}::mul",
+      "source": "src/util.rs",
+      "span": "97:12-99:13",
+      "local": true,
+      "reason": "Nested iterator closure translation failure; Gt forwarding wrappers share the opaque pattern",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "pairings.multi_miller_loop",
+      "rust_name": "bls12_381::pairings::multi_miller_loop",
+      "source": "src/pairings.rs",
+      "span": "552:0-601:1",
+      "local": true,
+      "reason": "Nested borrows in Adder doubling_step/addition_step",
+      "status": "unproved_axiom",
+      "rust_equivalence_proved": false
+    },
+    {
+      "lean_name": "SharedAGt.Insts.CoreOpsArithMulScalarGt.mul",
+      "rust_name": "bls12_381::pairings::{impl core::ops::arith::Mul<bls12_381::scalar::Scalar, bls12_381::pairings::Gt> for &'a bls12_381::pairings::Gt}::mul",
+      "source": "src/util.rs",
+      "span": "106:12-108:13",
+      "local": true,
+      "reason": "Nested iterator closure translation failure; Gt forwarding wrappers share the opaque pattern",
+      "status": "manual_model_unproved",
+      "rust_equivalence_proved": false
+    }
+  ],
+  "excluded_patterns": [
+    "group::CurveAffine",
+    "bls12_381::g1::{impl group::CurveAffine for _}",
+    "bls12_381::g2::{impl group::CurveAffine for _}",
+    "bls12_381::pairings::{impl pairing::PairingCurveAffine for _}",
+    "bls12_381::pairings::{impl pairing::Engine for _}",
+    "bls12_381::pairings::{impl pairing::MultiMillerLoop for _}",
+    "group::Curve",
+    "bls12_381::g1::{impl group::Curve for _}",
+    "bls12_381::g2::{impl group::Curve for _}",
+    "group::prime::PrimeCurve",
+    "bls12_381::g1::{impl group::prime::PrimeCurve for _}",
+    "bls12_381::g2::{impl group::prime::PrimeCurve for _}",
+    "bls12_381::g1::{impl group::Curve for _}::batch_normalize",
+    "bls12_381::g2::{impl group::Curve for _}::batch_normalize"
+  ],
+  "disabled_features": [
+    "bits",
+    "experimental",
+    "zeroize",
+    "nightly"
+  ],
+  "notes": [
+    "Excluded trait APIs are not represented by generated interfaces.",
+    "Opaque signatures/axioms are not verified implementations.",
+    "Manual models have not been proved equivalent to Rust.",
+    "Aeneas generated function counts include compiler-generated closures and wrappers."
+  ]
+}

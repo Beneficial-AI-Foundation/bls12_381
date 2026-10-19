@@ -1,0 +1,18 @@
+name: Verification inventory
+
+on: [push, pull_request]
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Check frozen Rust baseline and scope
+        run: python3 verification/scripts/check_scope.py
+      - name: Check external interface inventory is current
+        run: |
+          python3 verification/scripts/audit_externals.py
+          git diff --exit-code -- verification/external-functions.json
